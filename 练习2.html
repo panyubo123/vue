@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../练习1：注册页面/素材/vue.js"></script>
+</head>
+<style>
+    #app{
+        width: 500px;
+        margin: 50px auto;
+    }
+</style>
+<body>
+    <div id="app">
+        <h1 @click="fn">{{msg}}</h1>
+        <input type="text" v-model="msg" v-show="bol"/>
+    </div>
+    <script type="text/javascript">
+        var vm=new Vue({
+            el:'#app',
+            data:{
+                msg:'Edit Me!',
+                bol:true
+            },
+            methods:{
+                fn:function(){
+                    this.bol=!this.bol
+                }
+            }
+        })
+    </script>
+</body>
+</html>
